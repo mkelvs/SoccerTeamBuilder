@@ -1,4 +1,4 @@
-import csv, random
+import csv
 
 #Creating Lists
 dragons = []
@@ -68,6 +68,7 @@ def create_text():
             txt_file.write("\n")
         txt_file.write("\n")
 
+#Create individual letter from the team's head coach.
 def create_letter():
     for player in all_players:
         with open("{}.txt".format(player["Name"].lower().replace(" ", "_")), "w") as txt_file:
