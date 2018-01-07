@@ -36,11 +36,11 @@ def players_to_teams(experienced, regular, players_list, number_of_teams):
         raptors.extend(experienced[6:])
         raptors.extend(regular[6:])
     for player in dragons:
-        player.update({"Team": "Dragons", "Practice Time": "10:00 AM", "Practice Location": "Gym C"})
+        player.update({"team": "Dragons", "practice_time": "10:00 AM", "practice_location": "Gym C"})
     for player in sharks:
-        player.update({"Team": "Sharks", "Practice Time": "8:00 AM", "Practice Location": "Gym A"})
+        player.update({"team": "Sharks", "practice_time": "8:00 AM", "practice_location": "Gym A"})
     for player in raptors:
-        player.update({"Team": "Raptors", "Practice Time": "9:00 AM", "Practice Location": "Gym B"})
+        player.update({"team": "Raptors", "practice_time": "9:00 AM", "practice_location": "Gym B"})
 
     return dragons,sharks,raptors,all_players
 
@@ -74,9 +74,9 @@ def create_letter():
         with open("{}.txt".format(player["Name"].lower().replace(" ", "_")), "w") as txt_file:
             txt_file.write("Dear {},\n\n".format(player["Guardian Name(s)"]))
             txt_file.write("We are very excited to welcome {}.\n".format(player["Name"]))
-            txt_file.write("We are looking forward to see you on our first practice day held at {} in {}\n".format(player["Practice Time"], player["Practice Location"]))
+            txt_file.write("We are looking forward to see you on our first practice day held at {} in {}\n".format(player["practice_time"], player["practice_location"]))
             txt_file.write("See you there!\n\n")
-            txt_file.write("Regards,\n{} Head Coach".format(player["Team"]))
+            txt_file.write("Regards,\n{} Head Coach".format(player["team"]))
 
 
 #Creating Variables:
